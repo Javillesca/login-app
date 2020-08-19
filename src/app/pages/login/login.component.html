@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="abs-center">
+        <form #formLogin="ngForm" class="form" (ngSubmit)="onLogin(formLogin)">
+            <h1 class="primaryColor">Iniciar sesión</h1>
+            <br><br>
+            <span *ngIf="formLogin.submitted && formLogin.controls['email'].errors" class="text-danger">email</span>
+            <div class="form-group">
+                <input type="email" class="form-control formColor" name="email" aria-describedby="emailHelp" placeholder="Email" [(ngModel)]="user.email" required email>
+                <span class="focus-input100"></span>
+            </div>
+
+            <span *ngIf="formLogin.submitted && formLogin.controls['password'].errors" class="text-danger">Introduzca un password de al menos 6 caracteres</span>
+            <div class="form-group">
+                <input type="password" class="form-control formColor" name="password" placeholder="Password" [(ngModel)]="user.password" required minlength="6">
+                <span class="focus-input100"></span>
+            </div>
+            <button type="submit" class="btn btn-lg btn-block bgPrimaryColor">Acceder</button>
+            <br>
+            <div class="form-check">
+                <input [(ngModel)]="remember" class="form-check-input checkbox" name="remember" type="checkbox">
+                <label class="form-check-label" for="defaultCheck1">
+                  Recordar mi usuario <a routerLink="/logup" class="primaryColor">¿No tienes cuenta?, registrate</a>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>

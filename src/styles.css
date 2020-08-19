@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+.primaryColor {
+    color: blueviolet;
+}
+
+.checkbox {
+    color: blueviolet;
+}
+
+.bgPrimaryColor {
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form {
+    width: 450px;
+}
+
+.formColor {
+    background-color: whitesmoke;
+    font-weight: 700;
+}
